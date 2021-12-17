@@ -1,0 +1,18 @@
+header {
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    h1{
+        font-size: $size + 2;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: $Very-Light-Gray-LT;
+        font-weight: $Weight1;
+    }
+    span{
+        height: $size + 2;
+        width: $size + 2;
+        background: url('../images/icon-moon.svg') no-repeat;
+
+    }
+}

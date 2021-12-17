@@ -1,0 +1,118 @@
+header {
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+}
+header h1 {
+  font-size: 3.8rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #fafafa;
+  font-weight: 400;
+}
+header span {
+  height: 3.8rem;
+  width: 3.8rem;
+  background: url("../images/icon-moon.svg") no-repeat;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main section {
+  display: flex;
+  align-items: center;
+  background-color: #fafafa;
+  border-radius: 10px;
+  height: auto;
+  font-weight: 700;
+}
+main section span {
+  height: 1.8rem;
+  width: 1.8rem;
+  border: solid 1px #484b6a;
+  border-radius: 50px;
+}
+main section p {
+  font-size: 1.8rem;
+  color: #9394a5;
+}
+main section div {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+main section .items-list-lastDiv--btn {
+  border-bottom: 1px solid #484b6a;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+main .create-item {
+  padding: 15px;
+  gap: 10px;
+}
+main .items-list {
+  flex-direction: column;
+}
+main .items-list .items {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  border-bottom: 1px solid #484b6a;
+}
+main .container-btns-filter {
+  padding: 10px;
+  justify-content: space-evenly;
+}
+main .container-btns-filter p {
+  border-bottom: 1px solid #484b6a;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+footer p {
+  font-size: 1.8rem;
+  color: #484b6a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Josefin Sans";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: url("../images/bg-mobile-light.jpg") no-repeat;
+  background-size: 100% 40%;
+  background-color: #e4e5f1;
+  padding: 7vh 7vw;
+}
+
+.dark-theme {
+  background: url("../images/bg-mobile-dark.jpg") no-repeat;
+  background-color: #161722;
+  background-size: 100% 40%;
+}
+.dark-theme header span {
+  background: url("..//images/icon-sun.svg") no-repeat;
+}
+.dark-theme main section {
+  background-color: #393a4c;
+}
