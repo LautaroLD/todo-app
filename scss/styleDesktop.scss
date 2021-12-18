@@ -1,0 +1,26 @@
+@import './variables';
+@import './global';
+@import './header';
+@import './main';
+@import './footer';
+
+body {
+    align-items     : center;
+    background      : url('../images/bg-desktop-light.jpg') no-repeat;
+    background-size : 100% 30%;
+    background-color: $Very-Light-Grayish-Blue-LT;
+}
+
+.dark-theme {
+    background      : url('../images/bg-desktop-dark.jpg') no-repeat;
+    background-color: $Very-Dark-Blue-DT;
+    background-size : 100% 30%;
+}
+
+header {
+    width: 50%;
+}
+
+main {
+    width: 50%;
+}

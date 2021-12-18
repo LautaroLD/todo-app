@@ -8,57 +8,47 @@
   <link rel="stylesheet" href="./css/styleMobile.css" media="screen and (max-width: 768px)">
   <link rel="stylesheet" href="./css/styleDesktop.css" media="screen and (min-width: 769px)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Todo app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body id="body">
   <header>
     <h1>Todo</h1>
-    <span onclick="changeTheme()" id="change-btn" ></span>
+    <span onclick="changeTheme()" id="change-btn"></span>
   </header>
   <main>
     <section class="create-item" id="create-item">
-      <span></span>
-      <p>Create a new todo...</p>
+      <input class="create-item--input" id="create-item--input" placeholder="Create a new todo..."
+        onkeypress="botones(event)"></input>
+      <span onclick="getInput()" id="create-item-btn"></span>
     </section>
     <section class="items-list">
-      <div class="items">
-        <p>Clean</p>
+      <div id="items" class="items">
       </div>
       <div class="items-list-lastDiv">
-        <p>0 items left</p>
-        <p class="items-list-lastDiv--btn">Clear Completed</p>
+        <p id="countP">0 items left</p>
+        <div class="container-btns-filter">
+          <a>All</a>
+          <a>Active</a>
+          <a>Completed</a>
+        </div>
+        <a class="items-list-lastDiv--btn">Clear Completed</a>
       </div>
-    </section>
-    <section class="container-btns-filter">
-      <p>All</p>
-      <p>Active</p>
-      <p>Completed</p>
     </section>
   </main>
   <footer>
     <p> Drag and drop to reorder list</p>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Lautaro Duran</a>.
+    </div>
   </footer>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+
   <script src="./code.js"></script>
 </body>
 
