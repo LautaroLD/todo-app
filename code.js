@@ -68,5 +68,48 @@ function changeTheme() {
         body.classList.add('dark-theme')
     }
 }
+function clearComplete() {
+    const container = document.getElementById('items')
+    const elemDiv = document.getElementsByClassName('div-element')
+    const list = [...elemDiv]
+    list.forEach(elem => {
+        if (elem.firstChild.className == 'complete-check') {
+            container.removeChild(elem)
+            countItems()
+        }
+    })
+}
 
+function filterElements(btn) {
+    const elemDiv = document.getElementsByClassName('div-element')
+    const list = [...elemDiv]
+    if (btn == 'active') {
+        list.forEach(elem => {
+            if (elem.firstChild.className == 'complete-check') {
+                elem.style.display = 'none'
+            } else {
+                elem.style.display = 'flex'
+                
+            }
+            countItems()
+        })
 
+    } else if (btn == 'completed') {
+        list.forEach(elem => {
+            if (elem.firstChild.className !== 'complete-check') {
+                elem.style.display = 'none'
+            }else {
+                elem.style.display = 'flex'
+                
+            }
+            countItems()
+        })
+    } else if (btn == 'all') {
+        list.forEach(elem => {
+            elem.style.display = 'flex'
+            countItems()
+            // if (elem.firstChild.className !== 'complete-check') {
+            // }
+        })
+    }
+}

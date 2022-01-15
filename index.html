@@ -33,11 +33,11 @@
       <div class="items-list-lastDiv">
         <p id="countP">0 items left</p>
         <div class="container-btns-filter">
-          <a>All</a>
-          <a>Active</a>
-          <a>Completed</a>
+          <a onclick="filterElements('all')">All</a>
+          <a onclick="filterElements('active')" >Active</a>
+          <a onclick="filterElements('completed')">Completed</a>
         </div>
-        <a class="items-list-lastDiv--btn">Clear Completed</a>
+        <a class="items-list-lastDiv--btn" onclick="clearComplete()">Clear Completed</a>
       </div>
     </section>
   </main>

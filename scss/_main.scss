@@ -17,6 +17,7 @@ main {
             width        : $size + 1;
             border       : solid 1px $Very-Dark-Grayish-Blue-LT;
             border-radius: 50px;
+            cursor: pointer;
         }
 
         p,
@@ -24,6 +25,10 @@ main {
         a {
             font-size: $size;
             color    : $Dark-Grayish-Blue-LT;
+            
+        }
+        #create-item-btn:hover {
+            background-color: $Light-Grayish-Blue-hover-DT;
         }
 
         div {
@@ -51,6 +56,10 @@ main {
                 border-bottom: 1px solid $Very-Dark-Grayish-Blue-LT;
                 padding      : 5px 10px;
                 border-radius: 10px;
+                cursor: pointer;
+                &:hover {
+                    background-color: $Light-Grayish-Blue-hover-DT;
+                }
             }
 
             .container-btns-filter {
@@ -64,9 +73,10 @@ main {
                     border-bottom: 1px solid $Very-Dark-Grayish-Blue-LT;
                     padding      : 5px 10px;
                     border-radius: 10px;
+                    cursor: pointer;
 
-                    &:focus {
-                        background-color: $Check-Background;
+                    &:hover {
+                        background-color: $Light-Grayish-Blue-hover-DT;
                     }
                 }
             }

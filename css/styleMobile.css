@@ -83,12 +83,16 @@ main section span {
   width: 2.8rem;
   border: solid 1px #484b6a;
   border-radius: 50px;
+  cursor: pointer;
 }
 main section p,
 main section .create-item--input,
 main section a {
   font-size: 1.8rem;
   color: #9394a5;
+}
+main section #create-item-btn:hover {
+  background-color: #e4e5f1;
 }
 main section div {
   display: flex;
@@ -106,6 +110,10 @@ main section .items-list-lastDiv--btn {
   border-bottom: 1px solid #484b6a;
   padding: 5px 10px;
   border-radius: 10px;
+  cursor: pointer;
+}
+main section .items-list-lastDiv--btn:hover {
+  background-color: #e4e5f1;
 }
 main section .items-list-lastDiv .container-btns-filter {
   grid-column: 1/3;
@@ -118,9 +126,10 @@ main section .items-list-lastDiv .container-btns-filter a {
   border-bottom: 1px solid #484b6a;
   padding: 5px 10px;
   border-radius: 10px;
+  cursor: pointer;
 }
-main section .items-list-lastDiv .container-btns-filter a:focus {
-  background-color: linear-gradient #57ddff to #c058f3;
+main section .items-list-lastDiv .container-btns-filter a:hover {
+  background-color: #e4e5f1;
 }
 main .create-item {
   padding: 5px 10px;
