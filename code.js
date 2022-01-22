@@ -1,10 +1,18 @@
 function countItems() {
     const elements = document.getElementsByClassName('div-element')
+    let items = elements.length
     const p = document.getElementById('countP')
-    p.innerText = `${elements.length} items left`
+    let listElements = [...elements]
+    listElements.forEach(elem => {
+        let position = elem.getBoundingClientRect()
+        console.log(position)
+            if (position.width === 0) {
+                items--
+            }
+        })
+        p.innerText = `${items} items left`
 }
 function checkClass(elem) {
-    // const check = document.getElementsByClassName('check')
     elem.addEventListener('click', () => {
         if (elem.className == 'complete-check') {
             elem.classList.remove('complete-check')
@@ -20,7 +28,6 @@ function crossClick(elem) {
     elem.addEventListener('click', () => {
         const padre1 = elem.parentElement
         const padre2 = padre1.parentElement
-        // console.log(padre2.c)
         padre2.removeChild(padre1)
         countItems()
     })
@@ -108,8 +115,6 @@ function filterElements(btn) {
         list.forEach(elem => {
             elem.style.display = 'flex'
             countItems()
-            // if (elem.firstChild.className !== 'complete-check') {
-            // }
         })
     }
 }
